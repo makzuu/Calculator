@@ -15,18 +15,20 @@ function divide(a, b) {
 }
 
 function operate(operator, firstNumber, secondNumber) {
+    let result;
     switch (operator) {
         case "+":
-            add(firstNumber, secondNumber);
+            result = add(firstNumber, secondNumber);
             break;
         case "-":
-            subtract(firstNumber, secondNumber);
+            result = subtract(firstNumber, secondNumber);
             break;
         case "*":
-            multiply(firstNumber, secondNumber);
+            result = multiply(firstNumber, secondNumber);
             break;
         case "/":
-            divide(firstNumber, secondNumber);
+            result = divide(firstNumber, secondNumber);
             break;
     }
+    return result;
 }
