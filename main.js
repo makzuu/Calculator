@@ -35,6 +35,13 @@ operators.forEach((element) => {
             operator = e.target.id;
             display += operator;
             populate();
+        } else {
+            const result = operate(operator, Number(firstNumber), Number(secondNumber));
+            secondNumber = null;
+            firstNumber = result;
+            operator = e.target.id;
+            display = result + operator;
+            populate();
         }
     });
 });
