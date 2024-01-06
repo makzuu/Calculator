@@ -30,5 +30,15 @@ function operate(operator, firstNumber, secondNumber) {
             result = divide(firstNumber, secondNumber);
             break;
     }
+    result = fixed(result);
     return result;
+}
+
+function fixed(number) {
+    const numberString = number.toString();
+    if (numberString.includes(".")) {
+        number = number.toFixed(1);
+    }
+
+    return number;
 }
